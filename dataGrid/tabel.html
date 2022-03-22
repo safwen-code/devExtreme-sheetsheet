@@ -4,60 +4,26 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      window.jQuery ||
-        document.write(
-          decodeURIComponent(
-            '%3Cscript src="js/jquery.min.js"%3E%3C/script%3E',
-          ),
-        )
-    </script>
+    <title>Document</title>
+    <!-- jquery link -->
+    <script
+      type="text/javascript"
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+    ></script>
+
     <link
       rel="stylesheet"
-      type="text/css"
-      href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.common.css"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
       href="https://cdn3.devexpress.com/jslib/21.2.5/css/dx.light.css"
     />
-    <script src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"></script>
-    <script src="data.js"></script>
-    <title>Document</title>
+    <script
+      type="text/javascript"
+      src="https://cdn3.devexpress.com/jslib/21.2.5/js/dx.all.js"
+    ></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="data.js"></script>
   </head>
-  <body>
-    <div>
-      <div id="form"></div>
-    </div>
+  <body class="dx-viewport">
+    <div id="dataGrid"></div>
+    <p id="selected-emp"></p>
   </body>
-  <script>
-    $(() => {
-      operateur = { nom: '', description: '' }
-
-      $('#form').dxForm({
-        FormData: operateur,
-        items: [
-          {
-            dataField: 'nom',
-          },
-          {
-            dataField: 'description',
-          },
-          {
-            itemType: 'button',
-            horizontalAlignment: 'center',
-            buttonOptions: {
-              text: 'send',
-              type: 'success',
-              onClick: function (e) {
-                console.log('hi')
-              },
-            },
-          },
-        ],
-      })
-    })
-  </script>
 </html>
