@@ -1,5 +1,5 @@
 $(() => {
-  $('#form')
+  const forma = $('#form')
     .dxForm({
       formData: {
         name: 'John heart',
@@ -67,6 +67,13 @@ $(() => {
             },
           ],
         },
+        {
+          itemType: 'button',
+          buttonOptions: {
+            text: 'submit the form',
+            useSubmitBehavior: true,
+          },
+        },
       ],
     })
     .dxForm('instance')
@@ -78,4 +85,11 @@ $(() => {
   //     console.log(e.value)
   //   },
   // })
+  $('#form-container').on('submit', (e) => {
+    alert('submited')
+
+    const formData = forma.option('formData')
+    console.log(formData)
+    e.preventDefault()
+  })
 })
