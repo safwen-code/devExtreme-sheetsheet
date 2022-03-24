@@ -20,9 +20,20 @@ $(() => {
           //create Item groupe for personel info
           itemType: 'group',
           caption: 'personal Information',
+          // validation of value
           items: [
-            'name',
-            'officeNumber',
+            {
+              dataField: 'name',
+              isRequired: true,
+            },
+            {
+              dataField: 'officeNumber',
+              validationRules: [
+                {
+                  type: 'numeric',
+                },
+              ],
+            },
             {
               dataField: 'hireDate',
               editorOptions: {
